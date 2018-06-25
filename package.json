@@ -1,0 +1,33 @@
+{
+  "name": "cinemax-movie-service",
+  "version": "1.0.0",
+  "description": "Cinemax Movie Service",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alejunco/cinemax-movie-service.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/alejunco/cinemax-movie-service#readme",
+  "dependencies": {
+    "boom": "^7.1.1",
+    "dotenv": "^5.0.1",
+    "hapi": "^17.5.1",
+    "hapi-acl-auth": "^1.0.5",
+    "hapi-swagger": "^9.1.1",
+    "inert": "^5.1.0",
+    "joi": "^13.2.0"
+  },
+  "bugs": {
+    "url": "https://github.com/alejunco/cinemax-movie-service/issues"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "NODE_ENV=development nodemon --inspect src/server.js",
+    "lint": "eslint . --fix",
+    "test": "NODE_ENV=test mocha -G --reporter spec --recursive",
+    "test:integration": "NODE_ENV=test mocha --timeout 10000 -G --reporter spec --recursive \"test/integration/**/*.test.js\"",
+    "test:watch": "NODE_ENV=test mocha --timeout 10000 -G --reporter spec -w --recursive"
+  }
+}
